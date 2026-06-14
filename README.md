@@ -1,7 +1,8 @@
+
 # CHASM Mod Loader
 
 <p align="center">
-  <img src="CHASM_Mod loader.jpg" alt="CHASM Mod Loader Logo" width="600">
+<img width="600" height="300" alt="CHASM_Mod loader" src="https://github.com/user-attachments/assets/7974a4bf-acf9-4105-b2ae-c522e89bef3e" />
 </p>
 
 **CHASM** — это легковесный, экспериментальный загрузчик модов для Minecraft 1.20.1, работающий напрямую через Java Instrumentation API (`-javaagent`). 
