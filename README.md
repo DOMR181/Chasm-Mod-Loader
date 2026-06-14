@@ -30,3 +30,34 @@
 3. Перейдите во вкладку **"Параметры Java"** -> **"Аргументы Java"** и добавьте аргумент запуска:
    ```text
    -javaagent:Пут_К_Вашему_Файлу/ChasmLoader-1.0-SNAPSHOT.jar
+
+📝 Пример создания мода (FPS Counter Mod)
+Чтобы лоадер успешно распознал ваш мод, создайте структуру пакетов ru.mycustommod, класс ModInit и метод start():
+
+Java
+package ru.mycustommod;
+
+public class ModInit {
+    public static void start() {
+        System.out.println("[MyMod] Привет из бездны через CHASM!");
+        
+        // Ваш код мода (например, счетчик FPS в фоне)
+        Thread thread = new Thread(() -> {
+            while (true) {
+                try {
+                    Thread.sleep(1000);
+                    // Логика опроса Minecraft через рефлексию...
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread.setDaemon(true);
+        thread.start();
+    }
+}
+📄 Лицензия
+Этот проект распространяется под лицензией MIT License — вы можете свободно использовать, изменять и распространять этот код.
+
+
+---
